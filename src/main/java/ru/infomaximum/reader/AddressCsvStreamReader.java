@@ -6,12 +6,12 @@ import ru.infomaximum.entity.Address;
 import java.io.*;
 import java.util.Iterator;
 
-public class AddressCsvFileReader implements AddressReader {
+public class AddressCsvStreamReader implements AddressReader {
     private final BufferedReader reader;
     private final Iterator<Address> iterator;
 
-    public AddressCsvFileReader(File file) throws FileNotFoundException {
-        reader = new BufferedReader(new FileReader(file));
+    public AddressCsvStreamReader(InputStream inputStream) {
+        reader = new BufferedReader(new InputStreamReader(inputStream));
         CsvToBean<Address> csvReader = new CsvToBeanBuilder<Address>(reader)
                 .withType(Address.class)
                 .withSeparator(';')

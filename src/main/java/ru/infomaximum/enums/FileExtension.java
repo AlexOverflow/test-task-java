@@ -9,6 +9,10 @@ public enum FileExtension {
         this.fileExtension = fileExtension;
     }
 
+    public String getFileExtension() {
+        return fileExtension;
+    }
+
     @Override
     public String toString() {
         return this.fileExtension;

@@ -1,29 +1,60 @@
 package ru.infomaximum.entity;
 
-import java.util.Map;
-
 public class CityStatistic {
-    private Map<Address, AddressStatistic> duplicateAddressMap;
-    private Map<String, CityHouseStatistic> cityHouseStatistic;
+    private int oneStoryHouseCounter;
+    private int twoStoryHouseCounter;
+    private int threeStoryHouseCounter;
+    private int fourStoryHouseCounter;
+    private int fiveStoryHouseCounter;
 
-    public CityStatistic(Map<Address, AddressStatistic> addressMap, Map<String, CityHouseStatistic> cityHouseStatistic) {
-        this.duplicateAddressMap = addressMap;
-        this.cityHouseStatistic = cityHouseStatistic;
+    public CityStatistic() {}
+
+    public int getOneStoryHouseCounter() {
+        return oneStoryHouseCounter;
     }
 
-    public Map<Address, AddressStatistic> getDuplicateAddressMap() {
-        return duplicateAddressMap;
+    public void setOneStoryHouseCounter(int oneStoryHouseCounter) {
+        this.oneStoryHouseCounter = oneStoryHouseCounter;
     }
 
-    public void setDuplicateAddressMap(Map<Address, AddressStatistic> duplicateAddressMap) {
-        this.duplicateAddressMap = duplicateAddressMap;
+    public int getTwoStoryHouseCounter() {
+        return twoStoryHouseCounter;
     }
 
-    public Map<String, CityHouseStatistic> getCityHouseStatistic() {
-        return cityHouseStatistic;
+    public void setTwoStoryHouseCounter(int twoStoryHouseCounter) {
+        this.twoStoryHouseCounter = twoStoryHouseCounter;
     }
 
-    public void setCityHouseStatistic(Map<String, CityHouseStatistic> cityStatistic) {
-        this.cityHouseStatistic = cityStatistic;
+    public int getThreeStoryHouseCounter() {
+        return threeStoryHouseCounter;
+    }
+
+    public void setThreeStoryHouseCounter(int threeStoryHouseCounter) {
+        this.threeStoryHouseCounter = threeStoryHouseCounter;
+    }
+
+    public int getFiveStoryHouseCounter() {
+        return fiveStoryHouseCounter;
+    }
+
+    public void setFiveStoryHouseCounter(int fiveStoryHouseCounter) {
+        this.fiveStoryHouseCounter = fiveStoryHouseCounter;
+    }
+
+    public int getFourStoryHouseCounter() {
+        return fourStoryHouseCounter;
+    }
+
+    public void setFourStoryHouseCounter(int fourStoryHouseCounter) {
+        this.fourStoryHouseCounter = fourStoryHouseCounter;
+    }
+
+    @Override
+    public String toString() {
+        return "одноэтажных домов: " + oneStoryHouseCounter +
+                ", двухэтажных домов:" + twoStoryHouseCounter +
+                ", трех этажных домов:" + threeStoryHouseCounter +
+                ", четырех этажных домов:" + fourStoryHouseCounter +
+                ", пятиэтажных домов:" + fiveStoryHouseCounter + " ";
     }
 }

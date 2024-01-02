@@ -76,9 +76,9 @@ public class Address {
 
     @Override
     public String toString() {
-        return  "город: " + city +
-                ", улица: " + street +
-                ", дом: " + house +
-                ", этаж: " + floor;
+        return  city +
+                " ул. " + street +
+                " д. " + house +
+                " э." + floor;
     }
 }
